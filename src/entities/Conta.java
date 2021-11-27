@@ -6,11 +6,11 @@ public class Conta {
 	private int conta;
 	private int valor;
 	
-	public Conta(String nome, int conta, int valor) {
+	public Conta(String nome, int conta, int depositoInicial) {
 		super();
 		this.nome = nome;
 		this.conta = conta;
-		this.valor = valor;
+		deposito(depositoInicial);
 	}
 
 	public Conta(String nome, int conta) {
