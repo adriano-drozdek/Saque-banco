@@ -22,27 +22,27 @@ public class Programa {
 		if (resposta == 'y') {
 			System.out.println("Insira o valor do depósito inicial:");
 			double depositoInicial = sc.nextDouble();
-			account = new Account(conta, nome, depositoInicial);
-		} else {
+			account = new Account(nome, conta, depositoInicial);
+		}
+		else {
 			account = new Account(nome, conta);
 		}
 
 		System.out.println();
 		System.out.println("Dados da conta: ");
-		System.out.print(account);
+		System.out.println(account);
 
 		System.out.println();
 		System.out.print("Insira um valor de depósito: ");
 		double depositoV = sc.nextDouble();
 		account.deposito(depositoV);
 
-		System.out.println("Dados da conta atualizados: ");
-		System.out.print(account);
+		System.out.println("Dados da conta atualizados: " + account);
 		System.out.println();
 
 		System.out.print("Insira um valor de retirada: ");
 		double saque = sc.nextDouble();
-		account.deposito(saque);
+		account.saque(saque);
 		System.out.print("Dados atualizados: ");
 		System.out.print(account);
 

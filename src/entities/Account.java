@@ -4,7 +4,12 @@ public class Account {
 
 	private String nome;
 	private int conta;
-	private int valor;
+	private double valor;
+
+	public Account(String nome, int conta) {
+		this.nome = nome;
+		this.conta = conta;
+	}
 
 	public Account(String nome, int conta, double depositoInicial) {
 		this.nome = nome;
@@ -12,15 +17,7 @@ public class Account {
 		deposito(depositoInicial);
 	}
 
-	public Account(String nome, int conta) {
-		this.nome = nome;
-		this.conta = conta;
-	}
-
-	public Account(int conta2, String nome2, double depositoInicial) {
-		this.nome = nome2;
-		this.conta = conta2;
-	}
+	
 
 	public String getNome() {
 		return nome;
@@ -34,7 +31,7 @@ public class Account {
 		return conta;
 	}
 
-	public int getValor() {
+	public double getValor() {
 		return valor;
 	}
 
@@ -48,12 +45,7 @@ public class Account {
 
 	public String toString() {
 
-		return "account" 
-		+ conta 
-		+ ", titular: " 
-		+ nome 
-		+ ", valor: $ " 
-		+ String.format("%.2f", valor);
+		return "Conta " + conta + ", titular: " + nome + ", valor: $ " + String.format("%.2f", valor);
 	}
 
 }
